@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; 
+    background: linear-gradient(to right,  #6983bb, #d1cccc, #9c6ad6); 
+    background-size: cover;
+    background-position: center;
+}
+
+
+.form-container {
+    width: 450px;
+    background: rgba(255, 255, 255, 0.3); 
+    border: 2px solid rgba(255, 255, 255, .2); 
+    backdrop-filter: blur(20px); 
+    color: #fff;
+    border-radius: 30px;
+    padding: 20px;
+    box-shadow: 0 0 50px rgba(85, 207, 235, 0.5); /* Ombre douce avec un bleu clair */
+    overflow: hidden;
+}
+
+/* Titre du formulaire */
+h1 {
+    font-size: 36px;
+    text-align: center;
+    color: #4e6de3; /* Bleu clair pour le titre */
+    margin-bottom: 50px;
+}
+
+/* Style des labels */
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #6a5acd; /* Violet clair pour les labels */
+}
+
+/* Style des champs de saisie */
+input[type="text"],
+input[type="email"],
+input[type="matricule"],
+input[type="date"],
+input[type="numero de telephone"],  /* Correction pour le champ téléphone */
+textarea {
+    width: 90%;
+    height: 40px;
+    background: #f0f8ff; /* Fond bleu clair pour les champs */
+    border: 2px solid #d3d3e3; /* Bordure claire */
+    border-radius: 40px;
+    font-size: 16px;
+    color: #333; /* Texte sombre pour une meilleure lisibilité */
+    padding: 20px 40px 20px 20px;
+    margin-bottom: 15px;
+}
+
+/* Placeholder dans les champs de saisie */
+input::placeholder,
+textarea::placeholder {
+    color: #6a5acd; /* Violet clair pour les placeholders */
+}
+
+/* Style de la zone de texte (textarea) */
+textarea {
+    resize: vertical;
+}
+
+/* Icône à droite dans le champ (si utilisée pour un mot de passe par exemple) */
+.info i {
+    position: absolute;
+    right: 70px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Style des cases à cocher et des liens */
+.wrapper .R {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    margin: 0;
+}
+
+.R label input {
+    accent-color: #fff;
+    margin-right: 3px;
+}
+
+.R a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.R a:hover {
+    text-decoration: underline;
+}
+
+/* Style du bouton de soumission */
+button {
+    width: 100%;
+    height: 40px;
+    background: #6a5acd; /* Violet clair pour le bouton */
+    border: none;
+    outline: none;
+    border-radius: 60px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    font-size: 15px;
+    color: #fff;
+    font-weight: 600;
+}
+
+/* Lien de la page d'inscription (ou autre) */
+.signUp-link {
+    font-size: 15px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.signUp-link p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.signUp-link p a:hover {
+    text-decoration: underline;
+}
+
+/* Validation et feedback pour les champs obligatoires */
+input:required, textarea:required {
+    border-color: #6a5acd; /* Violet clair pour les champs obligatoires */
+}
+
+/* Effet de focus sur les champs */
+input:focus, textarea:focus {
+    border-color: #4e6de3; /* Bleu clair au focus */
+    outline: none; /* Retirer le contour par défaut du navigateur */
+}
+.dashboard {
+    background: rgba(0, 0, 0, 0.2);
+    color: white;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+.dashboard h2 {
+    text-align: center;
+    color: #6a5acd;  /* Violet clair */
+}
+
+#dashboardCounter {
+    font-weight: bold;
+    font-size: 24px;
+    color: #4e6de3;  /* Bleu clair */
+}
+
+.message {
+    display: none;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.message.success {
+    color: #fff;
+    background-color: #28a745 !important; /* Vert pour le succès */
+}
+
+.message.error {
+    color: #fff;
+    background-color: #dc3545 !important; /* Rouge pour une erreur */ 

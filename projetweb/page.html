@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tableau de bord de surveillance réseaux</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp">
+    
+    <link rel="stylesheet" href="page.css">
+</head>
+<body>
+    <div class="container">
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img src="./images/logo3.png" >
+                    <h1>Moni<span id="danger">Net</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-symbols-sharp">close</span>
+                </div>
+            </div>
+
+
+            <div class="sidebar">
+                <a href="#">
+                    <span class="material-symbols-sharp">grid_view</span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="devices.html">
+                    <span class="material-symbols-sharp">devices</span>
+                    <h3>Devices</h3>
+                </a>
+                <a href="reports.html">
+                    <span class="material-symbols-sharp">report</span>
+                    <h3>Reports</h3>
+                    <span class="message-count"></span>
+                </a>
+                <a href="Login.html">
+                    <span class="material-symbols-sharp">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+        <!------------------------------fin de aside--------------->
+        <main>
+            <h1> Dashboard</h1>
+            <div class="right">
+                <div class="top">
+                    <button id="menu-btn">
+                        <span class="material-symbols-sharp">menu</span>
+                    </button>
+                    <div class="theme-toggler">
+                        <span class="material-symbols-sharp active">light_mode</span>
+                        <span class="material-symbols-sharp">dark_mode</span>
+                    </div>
+                    <div class="profile">
+                        <div class="info">
+                            <p>Hey, <b id="username">you</b></p>
+                        </div>
+                        <div class="profile-photo">
+                            <img src="./images/avatar.jpeg" alt="image2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="date">
+                <input type="date">
+            </div>
+            
+            <div class="insights">
+                <div class="users">
+                    <span class="material-symbols-sharp">group</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h2>Users</h2>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx='38' cy='38' r='36'></circle>
+                            </svg>
+                            <div class="number">
+                                <p>10</p>  <!------javascript a faire apres---->
+                            </div>
+                        </div>
+                    </div>
+                    <small class="text-muted">Last 24 Hours</small>
+                </div>
+                <!-------------------End of Users------------>
+                <div class="Daily">
+                    <span class="material-symbols-sharp">visibility</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h2>Daily views</h2>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx='38' cy='38' r='36'></circle>
+                            </svg>
+                            <div class="number">
+                                <p>23</p>  <!------javascript a faire apres---->
+                            </div>
+                        </div>
+                    </div>
+                    <small class="text-muted">Last 24 Hours</small>
+                </div>
+                <!-------------------End of Daily views------------>  
+                <div class="reports">
+                    <span class="material-symbols-sharp">report</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h2>Reports</h2>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx='38' cy='38' r='36'></circle>
+                            </svg>
+                            <div class="number">
+                                <div class="number">
+                                    <p id="dashboardCounter"><span>0</span></p>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="text-muted">Last 24 Hours</small>
+                </div>
+                <!-------------------End of Reports------------>   
+                <div class="erreur">
+                    <span class="material-symbols-sharp">warning</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h2>Errors</h2>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx='38' cy='38' r='36'></circle>
+                            </svg>
+                            <div class="number">
+                                <p>0</p>  <!------javascript a faire apres---->
+                            </div>
+                        </div>
+                    </div>
+                    <small class="text-muted">Last 24 Hours</small>
+                </div>
+                <!-------------------End of Error------------>
+            </div>
+            <!---------------end of insights------------------->
+            <h2>Equipment</h2>
+            <div class="ff">
+                <h3>Router 1</h3>
+                <h3>Router 2</h3>
+            </div>
+            <div class="routers">
+                
+    <!------------------------------------- Router 1 ---------------------------->
+<table id="router-1" onload="fetchRouter1()">
+    <thead>
+        <tr>
+            <th>Interfaces Index</th>
+            <th>Status</th>
+            <th>IP Address</th>
+            <th>Traffic (Sent/Received)</th>
+            <th>Details</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Les données seront injectées ici via JavaScript -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="primary">
+                <a class="primary" href="/router.html">Details</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+            
+            
+               <!---------------------- Router 2 -------------------------------------->
+<table id="router-2" onload="fetchRouter2()">
+    <thead>
+        <tr>
+            <th>Interfaces Index</th>
+            <th>Status</th>
+            <th>IP Address</th>
+            <th>Traffic (Sent/Received)</th>
+            <th>Details</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Les données seront injectées ici via JavaScript -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="primary">
+                <a class="primary" href="/router.html">Details</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+<script src="dashboard.js"></script>
+
+            
+            
+            
+</div>
+<h3>Devices</h3>
+<div class="pc">
+    <table id="pc-info">
+        <thead>
+            <tr>
+                <th>PC</th>
+                <th>Address IP</th>
+                <th>CPU</th>
+                <th>RAM</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Les données dynamiques seront injectées ici via JavaScript -->
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="primary">
+                    <a class="primary" href="/pc.html">Details</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
+ 
+ 
+ 
+ 
+ 
+<h3>Stats</h3>
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>Routers</th>
+                <th>CPU usage</th>
+                <th>RAM usage</th>
+                <th>Uptime</th>
+            </tr>
+        </thead>
+        <tbody id="stats-table-body">
+            <tr>
+                <td>Router 1</td>
+                <td id="router1-cpu"></td>
+                <td id="router1-ram"></td>
+                <td id="router1-uptime"></td>
+            </tr>
+            <tr>
+                <td>Router 2</td>
+                <td id="router2-cpu"></td>
+                <td id="router2-ram"></td>
+                <td id="router2-uptime"></td>
+            </tr>
+        </tbody>
+    </table>
+</div> 
+ 
+ 
+ 
+ 
+</div>
+</main>
+
+<script src="/page.js"></script>
+<script src="/dashboard.js"></script>
+<script>
+    // Appel de la fonction pour remplir dynamiquement les données des PCs
+    document.addEventListener('DOMContentLoaded', () => {
+        fetchPCInfo();
+    });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Sélectionnez le champ de date
+        const dateInput = document.querySelector('.date input[type="date"]');
+
+        // Obtenez la date actuelle
+        const today = new Date();
+
+        // Formatez la date en format YYYY-MM-DD
+        const formattedDate = today.toISOString().split('T')[0];
+
+        // Définissez la valeur par défaut du champ
+        dateInput.value = formattedDate;
+    });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', async () => {
+        try {
+            // Récupérer l'élément HTML où afficher le nombre d'utilisateurs
+            const userCountElement = document.querySelector('.users .number p');
+
+            // Appeler l'API pour obtenir le nombre d'utilisateurs
+            const response = await fetch('/api/user-count');
+            if (!response.ok) {
+                throw new Error('Failed to fetch user count');
+            }
+
+            const data = await response.json();
+
+            // Mettre à jour le nombre d'utilisateurs dans le tableau de bord
+            userCountElement.textContent = data.count || 0;
+        } catch (error) {
+            console.error('Error fetching user count:', error);
+        }
+    });
+</script>
+
+</body>
+</html>

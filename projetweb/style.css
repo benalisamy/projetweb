@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/*hna ndiro modification fi fond d'écran*/
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url("images/R4.webp") no-repeat center center fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+/*hna ha njibo la class wrapper bch ndiro fond d'ecran ta3 carre login*/
+/*classe ta3 le carre*/
+.wrapper {
+  width: 450px;
+
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  color: #fff;
+  border-radius: 30px;
+  padding: 20px 20px;
+  box-shadow: 0 0 50px #54cfeb;
+  overflow: hidden;
+}
+
+/*classe ta3 login*/
+.wrapper h1 {
+  font-size: 36px;
+  text-align: center;
+}
+
+/*classe ta3 le username ou pw*/
+.wrapper .info {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 30px;
+}
+
+.info input {
+  width: 90%;
+  height: 40%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgb(211, 211, 227);
+  border-radius: 40px;
+  font-size: 16px;
+  color: #fff;
+  padding: 20px 40px 20px 20px;
+}
+
+.info input::placeholder {
+  color: #fff;
+}
+
+.info i {
+  position: absolute;
+  right: 70px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.wrapper .R {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  margin: 0px 0px 0px;
+}
+
+.R label input {
+  accent-color: #fff;
+  margin-right: 3px;
+}
+
+.R a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.R a:hover {
+  text-decoration: underline;
+}
+
+.wrapper .btn {
+  width: 100%;
+  height: 40px;
+  background: #fff;
+  border: none;
+  outline: none;
+  border-radius: 60px;
+  box-shadow: 0 0 10px #e0dceb;
+  cursor: pointer;
+  font-size: 15px;
+  color: #333;
+  font-weight: 600;
+}
+
+.wrapper .signUp-link {
+  font-size: 15px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.signUp-link p a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.signUp-link p a:hover {
+  text-decoration: underline;
+}

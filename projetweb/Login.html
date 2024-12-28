@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="form-wrapper sign-in">
+        <form onsubmit="loginUser(event)">
+          <h1>Login</h1>
+          <div class="info">
+            <input type="text" placeholder="Username" required />
+            <i class="bx bxs-user"></i>
+          </div>
+          <div class="info">
+            <input type="password" placeholder="Password" required />
+            <i class="bx bxs-lock-alt"></i>
+          </div>
+          <button type="submit" class="btn">Login</button>
+          <div class="signUp-link">
+            <p>
+              Don't have an account?
+              <a href="Sign-up.html" class="signUpBtn-link">Sign Up</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script>
+  async function loginUser(event) {
+    event.preventDefault(); // Empêche le rechargement de la page
+
+    // Récupération des valeurs du formulaire
+    const username = document.querySelector('input[placeholder="Username"]').value;
+    const password = document.querySelector('input[placeholder="Password"]').value;
+
+    try {
+      const response = await fetch('/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username, password }),
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        
+        // Sauvegarde du jeton dans le localStorage
+        localStorage.setItem('token', data.token);
+
+        // Redirection vers la page principale
+        window.location.href = '../page.html';
+      } else {
+        alert('Login failed. Please check your username and password.');
+      }
+    } catch (error) {
+      console.error('Error during login:', error);
+      alert('An error occurred. Please try again later.');
+    }
+  }
+</script>
+  </body>
+</html>
+

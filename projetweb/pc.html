@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Devices</title>
+    <link rel="stylesheet" href="devices.css">
+</head>
+<body>
+    <header>
+        <h1>Network Equipment Data Sheets</h1>
+        <nav>
+            <ul>
+                <li><a href="#pc">Terminal Equipement</a></li>
+        </nav>
+        <button class="back-button" onclick="goBack()">Return</button>
+    </header>
+
+    <section id="pc" class="device-card">
+        <h2>PC</h2>
+        <ul>
+            <li><strong>Processor:</strong> Intel Core i5 </li>
+            <li><strong>RAM:</strong> 8 GB </li>
+            <li><strong>Storage:</strong> 256 GB SSD </li>
+            <li><strong>Operating System:</strong> Ubuntu 22.04 LTS </li>
+            <li><strong>Graphics Card:</strong> Intel UHD, AMD Vega, or NVIDIA card</li>
+            <li><strong>Screen:</strong> 15.6" Full HD (1920x1080)</li>
+        </ul>
+        <button class="info-btn" onclick="showMoreInfo('pc')">Details</button>
+        <div id="pc-info" class="extra-info">
+            <h3>Operating System Features</h3>
+            <ul>
+                <li>Desktop environment: GNOME (default)</li>
+                <li>Office application support: LibreOffice, GIMP, Inkscape</li>
+                <li>Package manager: APT, Snap, Flatpak</li>
+                <li>Development tools: Python, Java, C++, etc</li>
+                <li>Virtualization support with VirtualBox, KVM, Docker</li>
+                <li>Security: Automatic updates, AppArmor, Uncomplicated Firewall</li>
+            </ul>
+            <h3>Ubuntu advantages</h3>
+            <ul>
+                <li>Open-source and free</li>
+                <li>Compatible with a wide range of software and applications</li>
+                <li>Lightweight and powerful system</li>
+                <li>Ease for beginners and professionals</li>
+                <li>Large community of users and developers</li>
+            </ul>
+        </div>
+    </section>
+
+    <script src="devices.js"></script>
+</body>
+</html>

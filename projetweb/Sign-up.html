@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="form-wrapper sign-up">
+        <form onsubmit="registerUser(event)">
+          <h1>Sign Up</h1>
+          <div class="info">
+            <input type="text" placeholder="Username" required />
+            <i class="bx bxs-user"></i>
+          </div>
+          <div class="info">
+            <input type="email" placeholder="Email" required />
+            <i class="bx bx-envelope"></i>
+          </div>
+          <div class="info">
+            <input type="password" placeholder="Password" required />
+            <i class="bx bxs-lock-alt"></i>
+          </div>
+          <button type="submit" class="btn">Sign Up</button>
+          <div class="signUp-link">
+            <p>
+              Already have an account?
+              <a href="Login.html" class="signInBtn-link">Sign In</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script>
+      async function registerUser(event) {
+        event.preventDefault();
+        const username = document.querySelector('input[placeholder="Username"]').value;
+        const email = document.querySelector('input[placeholder="Email"]').value;
+        const password = document.querySelector('input[placeholder="Password"]').value;
+
+        const response = await fetch('/register', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ username, email, password }),
+        });
+
+        if (response.ok) {
+          alert('User registered successfully!');
+          window.location.href = 'Login.html';
+        } else {
+          alert('Registration failed.');
+        }
+      }
+    </script>
+  </body>
+</html>
+

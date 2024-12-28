@@ -1,0 +1,14 @@
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+.dashboard {
+    padding: 20px;
+    text-align: center;
+}
+
+#dashboardCounter {
+    font-size: 30px;
+    color: #4CAF50;
+}

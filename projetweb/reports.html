@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Reports</title>
+    <link rel="stylesheet" href="reports.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="form-container">
+        <h1><b>Report Form</b></h1>
+        <form id="rapportForm" action="server.js" method="POST">
+            <label for="nom">Last name :</label>
+            <input type="text" id="nom" name="nom" required placeholder="Enter your last name">
+
+            <label for="prenom">First name :</label>
+            <input type="text" id="prenom" name="prenom" required placeholder="Enter your first name">
+
+            <label for="email">E-mail :</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+            <label for="matricule">Registration number :</label>
+            <input type="text" id="matricule" name="matricule" maxlength="10" required placeholder="Enter your RN">
+
+            <label for="numero de telephone">Phone number :</label>
+            <input type="text" id="numero de telephone" name="numero de telephone" required placeholder="Enter your company PN">
+
+
+            <label for="date">Report date :</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="sujet">Report subject :</label>
+            <input type="text" id="sujet" name="sujet" required placeholder="Enter the report subject">
+
+            <label for="description">Description :</label>
+            <textarea id="description" name="description" rows="10" required placeholder="Detail the report"></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <div id="message" class="message"></div>
+
+    </div>
+    <script src="reports.js"></script>
+</body>
+</html>
+

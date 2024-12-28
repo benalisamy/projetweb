@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Devices</title>
+    <link rel="stylesheet" href="devices.css">
+</head>
+<body>
+    <header>
+        <h1>Network Equipment Data Sheets</h1>
+        <nav>
+            <ul>
+                <li><a href="#switch">Switch</a></li>
+            </ul>
+        </nav>
+        <button class="back-button" onclick="goBack()">Return</button>
+    </header>
+
+    <section id="switch" class="device-card">
+        <h2>Switch</h2>
+        <ul>
+            <li><strong>Ports:</strong> 24 Gigabit Ethernet ports (10/100/1000 Mbps)</li>
+            <li><strong>Switch type:</strong> Layer 2 switch</li>
+            <li><strong>Transfer speed:</strong> Up to 10 Gbps depending on the model</li>
+            <li><strong>Connectivity type:</strong> Ethernet, FastEthernet, fiber optic</li>
+            <li><strong>Power supply:</strong> AC 100-240V, 50/60Hz</li>
+            <li><strong>Dimensions:</strong> 44 x 22 x 4.5 cm </li>
+        </ul>
+        <button class="info-btn" onclick="showMoreInfo('switch')">Details</button>
+        <div id="switch-info" class="extra-info">
+            <h3>Additional Features</h3>
+            <ul>
+                <li><strong>VLAN Support:</strong> up to 256 configurable VLANs</li>
+                <li><strong>QoS (Quality of Service):</strong> to prioritize traffic</li>
+                <li><strong>Management:</strong> Unmanaged / Managed </li>
+                <li><strong>Power over Ethernet:</strong> to power devices such as cameras or IP phones</li>
+                <li><strong>Redundancy:</strong> Support for aggregated links and redundancy protocols such as Spanning Tree Protocol (STP)</li>
+                <li><strong>Warranty:</strong> 5 years (depending on model and manufacturer)</li>
+            </ul>
+            <h3>Switch Benefits</h3>
+            <ul>
+                <li>Centralized network management, especially in environments enterprise</li>
+                <li>Low latency and high availability thanks to fast switching technology</li>
+                <li>Support for bandwidth management to optimize network utilization</li>
+                <li>Ability to create separate virtual networks thanks to VLANs</li>
+                <li>Ease of integration into large infrastructures with multiple switches</li>
+            </ul>
+        </div>
+    </section>
+
+    <script src="devices.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Router</title>
+    <link rel="stylesheet" href="devices.css">
+</head>
+<body>
+    <header>
+        <h1>Network Equipment Data Sheets</h1>
+        <nav>
+            <ul>
+                <li><a href="#router">Router</a></li>
+            </ul>
+        </nav>
+        <button class="back-button" onclick="goBack()">Return</button>
+    </header>
+
+    <section id="router" class="device-card">
+        <h2>Router 7200</h2>
+        <ul>
+            <li><strong>Model:</strong> Cisco 7200</li>
+            <li><strong>Processor:</strong> 1 x 1.2 GHz</li>
+            <li><strong>RAM:</strong> 2 GB</li>
+            <li><strong>Ports:</strong> 2 x Gigabit Ethernet, 2 x FastEthernet, 1 x Serial</li>
+            <li><strong>Dimensions:</strong> 43.7 x 36.8 x 8.9 cm</li>
+            <li><strong>Weight:</strong> 8.4 kg</li>
+        </ul>
+        <button class="info-btn" onclick="showMoreInfo('router')">Details</button>
+        <div id="router-info" class="extra-info">
+            <h3>Advanced Features</h3>
+        <ul>
+            <li>Support for routing protocols such as OSPF, EIGRP, BGP</li>
+                <li>VPN support (IPsec, GRE, L2TP)</li>
+                <li>Quality of Service (QoS) management</li>
+                <li>Virtual Routing and Forwarding (VRF) support</li>
+                <li>Compatibility with additional service modules for security, management and WAN connectivity</li>
+        </ul>
+        <h3>Applications</h3>
+        <ul>
+            <li>Network optimization for medium to large businesses</li>
+            <li>High-speed connections for data transmission and network traffic management</li>
+            <li>Used in environments requiring high network reliability and security</li>
+        </ul>
+        </div>
+    </section>
+
+    <script src="devices.js"></script>
+</body>
+</html>
+
+<script src="script.js"></script>
+
+</body>
+</html>
